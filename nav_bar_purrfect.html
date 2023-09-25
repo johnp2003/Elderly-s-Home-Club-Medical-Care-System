@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+        <title>Home Page</title>
+        <link rel="icon" href="images/icon.jpg" type="image/jpg" sizes="16x16">
+        <style>
+            /* css for header */
+            nav{
+                box-shadow: 0 0.4rem 1.4rem rgb(0 0 0 / 11%);
+            }
+            .navbar-nav{
+                margin-right: 50px;
+                text-align: center;
+            }
+
+            .d-flex{
+                width: 800px;
+            }
+
+            .nav-link{
+                width:100px;
+                margin-left: 0%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .nav-item{
+                padding: 5px;
+            }
+
+
+            /* css for our services */
+            .wrapper1{
+                width: 100%px;
+                background-image: url(images/test.jpg);
+                background-size: cover;
+                font-size: 45px;
+                font-family: Garamond, serif;
+                color: black;
+
+            }
+            .subject{
+                height: 250px;
+                width: 100%;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+
+            /* css for selection*/
+
+            .wrapper2{
+                padding-top: 100px;
+                padding-bottom: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgb(240, 240, 231);
+                
+                
+            }
+
+            .card{
+                width: 280px;
+                height: 220px;
+                padding: 2rem 1rem;
+                background: #fff;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+                transition: 0.5s ease-in-out;
+                margin-left: 60px;
+            }
+
+            .card:hover{
+                transform: translateY(20px);
+            }
+
+            .card:before{
+                content:"";
+                position:absolute;
+                top: 0%;
+                left: 0%;
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-color: rgb(165, 213, 217,0.7);
+                z-index: 2;
+                transition: 0.3s all;
+                opacity: 0;
+            }
+
+            .card:hover:before{
+                opacity: 1;
+            }
+            
+            .card img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top:0%;
+                left: 0%;
+            }
+
+            .card .info{
+                position: relative;
+                z-index: 3;
+                color:#fff;
+                opacity: 0;
+                transform: translateY(20px);
+                transition: 0.3s;
+                display: inline-block;
+
+            }
+
+            .card:hover .info{
+                opacity:1;
+                transform: translateY(0px);
+            }
+            
+            .button-text{
+                cursor: grab;
+                font-size:larger;
+                padding: 15px;
+                border-radius: 8px;
+                background-color: #dbdbdb
+
+            }
+
+            .video{
+                
+                display: flex;
+                justify-content: center;
+            }
+
+            .content{
+                margin-top: 100px;
+                margin-left: 300px;
+                margin-right: 300px;
+                justify-content: center;
+                font-size: 20px;
+                line-height: 2.5;
+                align-items: center;
+            }
+            .background{
+                background-color: aliceblue;
+            }
+
+            
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                      <img src="images/Pet Care Logo.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+                      Purrfect Care
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about_us.php">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact_us.php">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="specialities.php">Specialities</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            My Profile
+                            </a>
+                            <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="my_profile.php">View & Edit My Profile</a></li>
+                            
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="logout.php">Logout</a></li>
+
+                        </ul>
+                      </li>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Book Appointment
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="book_appointment.php">Book An Appointment</a></li>
+                            <li><a class="dropdown-item" href="suggest_doctor_and_appointment_details.php">Suggest a Doctor</a></li>
+                            <li><a class="dropdown-item" href="specialities.php">Find a Doctor</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="view_my_appointment_customer.php">View Appointment</a></li>
+
+                        </ul>
+                      </li>
+                    </ul>
+                </div>
+                
+                </div>
+            </div>
+          </nav>
+          
+        <div class="wrapper1">
+            <div class="subject">
+                <b><p>Our Services</p></b>
+            </div>
+        </div>
+        
+        <div class="wrapper2">
+            <div class="card">
+                <img src="images/talking.jpg">
+                <div class="info"><a href="book_appointment.php"><button class="button-text">Book Appointment</button></a></div>
+                
+            </div>
+            <div class="card">
+                <img src="images/appointment.JPG">
+                <div class="info"><a href="view_my_appointment_customer.php"><button class="button-text">View My Appointment</button></a></div>
+                
+            </div>
+            <div class="card">
+                <img src="images/doctor.jpg">
+                <div class="info"><a href="specialities.php"><button class="button-text">Find a Doctor</button></a></div>
+            </div>
+        </div>
+        <div class="background">
+            <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/CahwWD6K-OU" 
+                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="content">
+                <h2 align="center">The Importance of Regular Check-Ups</h1>
+                <ol>
+                    <li>Going for a Medical Checkup regularly can reduce your risk of getting sick </li>
+                    <li>Regular Checkups can help identify stress-related diseases </li>
+                    <li>Yearly Checkups can help to identify blood test results </li>
+                    <li>Periodic Health Checkups will make you more aware of your health </li>
+                </ol>
+                
+            </div>
+        </div>
+    </body>
+</html>
